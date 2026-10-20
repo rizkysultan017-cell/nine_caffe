@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Nine Cafe favicon">
+  <circle cx="60" cy="60" r="59" fill="#FFFBF3" stroke="#17211B" stroke-opacity="0.14"/>
+  <text x="17" y="88" font-family="Georgia, serif" font-size="88" font-weight="600" letter-spacing="-6" fill="#111612">9</text>
+  <g transform="translate(91 21) rotate(90)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="25" font-weight="600" letter-spacing="1.8" fill="#111612">NINE.</text>
+  </g>
+</svg>
