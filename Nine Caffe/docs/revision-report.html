@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>Nine Cafe & Eatery — Revision Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --paper: #F2EBDD; --paper-light: #FFFBF3; --ink: #17211B; --forest: #203026;
+    --sage: #4B6352; --clay: #9C4A2E; --butter: #E4C36A; --muted: #5D665E;
+  }
+  html { background: #E7DCC8; }
+  body {
+    margin: 0 auto;
+    max-width: 820px;
+    padding: 54px 64px 72px;
+    background: var(--paper-light);
+    color: var(--ink);
+    font-family: Inter, "Segoe UI", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.62;
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
+  h1 { font-size: 42px; line-height: 1.02; margin: 0 0 14px; }
+  h2 { font-size: 25px; margin: 44px 0 12px; padding-top: 18px; border-top: 2px solid var(--ink); }
+  h3 { font-size: 18px; margin: 26px 0 8px; }
+  p { margin: 0 0 12px; }
+  em { font-family: Fraunces, Georgia, serif; font-style: italic; color: var(--clay); }
+  a { color: var(--clay); }
+  code { padding: 2px 6px; border-radius: 6px; background: #E7DCC8; font-family: Consolas, monospace; font-size: 13px; }
+  table { width: 100%; margin: 14px 0 18px; border-collapse: collapse; font-size: 13.5px; page-break-inside: avoid; }
+  th, td { padding: 8px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(23,33,27,.18); }
+  th { background: var(--forest); color: var(--paper); font-weight: 600; }
+  tr:nth-child(even) td { background: rgba(231,220,200,.45); }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 5px; }
+  .cover { min-height: 76vh; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .cover .logo { width: 122px; height: 122px; margin-bottom: 34px; }
+  .kicker { margin: 0 0 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--clay); }
+  .lede { max-width: 620px; font-size: 18px; color: var(--sage); }
+  .rule { width: 90px; height: 4px; margin: 30px 0 16px; background: var(--butter); }
+  .meta { font-size: 13px; color: var(--muted); }
+  .stamp { display: inline-block; margin-top: 36px; padding: 9px 16px; border-radius: 999px; background: var(--forest); color: var(--paper); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .callout { margin: 18px 0; padding: 16px 18px; border-left: 4px solid var(--butter); background: #FFF3D6; page-break-inside: avoid; }
+  .callout strong { display: block; margin-bottom: 4px; }
+  .section { page-break-before: always; }
+  .no-break { page-break-inside: avoid; }
+  @page { size: A4; margin: 15mm 14mm 16mm; }
+  @media print {
+    html, body { background: #fff; }
+    body { max-width: none; padding: 0; font-size: 10.5pt; line-height: 1.5; }
+    h2 { font-size: 17pt; }
+    h1 { font-size: 30pt; }
+    .cover { min-height: auto; padding-top: 40mm; }
+    .stamp { border: 1px solid var(--forest); }
+    tr:nth-child(even) td { background: #F2EBDD !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="cover">
+    <svg class="logo" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="60" fill="#FFFBF3" stroke="#17211B" stroke-opacity="0.14" />
+      <text x="17" y="88" font-family="Fraunces, Georgia, serif" font-size="88" font-weight="600" letter-spacing="-6" fill="#111612">9</text>
+      <g transform="translate(91 21) rotate(90)"><text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="600" letter-spacing="1.8" fill="#111612">NINE.</text></g>
+    </svg>
+    <p class="kicker">Design revision · 19 Oct 2026</p>
+    <h1>Nine Cafe &amp; Eatery</h1>
+    <p class="lede">Dusk Coffee Ledger: an editorial coffee-room site built around the supplied menu and the circular “9 / NINE.” logo.</p>
+    <div class="rule"></div>
+    <p class="meta">Static single-page site · HTML, CSS, vanilla JS · no build step<br />
+    Menu and logo supplied by the cafe owner · photos and live contact data pending</p>
+    <span class="stamp">Contoh desain</span>
+  </section>
+
+  <section>
+    <h2>1. What this revision is</h2>
+    <p>The old page was a generic card stack with a placeholder menu, low-contrast text, and motion that hid content until JavaScript ran. This revision keeps the warm, local, late-night positioning and rebuilds the surface around the supplied menu and logo.</p>
+    <p>The direction is <strong>Dusk Coffee Ledger</strong>: warm paper, deep espresso green, burnt clay, and one butter-yellow signal. The page reads like a printed menu under a low lamp: oversized Fraunces type, ruled lines, numbered sections, and mixed paper/forest surfaces instead of identical rounded cards.</p>
+    <div class="callout">
+      <strong>What stayed</strong>
+      <span>Indonesian copy, cafe data, WhatsApp-first ordering, static-site simplicity, and every demo disclosure. No framework, no build step, no runtime dependency.</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2. Design system</h2>
+    <table>
+      <tr><th>Token</th><th>Value</th><th>Role</th></tr>
+      <tr><td>Paper</td><td><code>#F2EBDD</code></td><td>Page canvas</td></tr>
+      <tr><td>Paper deep</td><td><code>#E7DCC8</code></td><td>Recessed panels</td></tr>
+      <tr><td>Paper light</td><td><code>#FFFBF3</code></td><td>Cards, logo disc</td></tr>
+      <tr><td>Ink</td><td><code>#17211B</code></td><td>Body text, logo</td></tr>
+      <tr><td>Forest</td><td><code>#203026</code></td><td>Bands, sheet, CTA</td></tr>
+      <tr><td>Sage</td><td><code>#4B6352</code></td><td>Secondary text</td></tr>
+      <tr><td>Clay</td><td><code>#9C4A2E</code></td><td>Numbers, italic accents</td></tr>
+      <tr><td>Butter</td><td><code>#E4C36A</code></td><td>Open signal, focus ring</td></tr>
+      <tr><td>Muted</td><td><code>#5D665E</code></td><td>Captions, notes</td></tr>
+    </table>
+    <p>Type: <strong>Fraunces</strong> 600/700 plus italic for display; <strong>Inter</strong> 400–700 for body. Radii 4 / 12 / 22. Max content width 1240px.</p>
+  </section>
+
+  <section class="section">
+    <h2>3. Menu and logo update</h2>
+    <ul>
+      <li>The supplied menu photos replaced the old 15-item placeholder menu.</li>
+      <li>Five categories: Coffee Based, Milk Based, Refresher, Main Course, Snack Based.</li>
+      <li>25 items with the supplied prices, pinned by <code>tests/menu-data.test.js</code>.</li>
+      <li>Only printed descriptions were added: Milky Berry (strawberry/blueberry) and Indomie (goreng/kuah/nyemek). Nothing else was invented.</li>
+      <li>The printed spelling <code>Butterscooth Latte</code> is preserved. Confirm before launch if the cafe wants <code>Butterscotch</code>.</li>
+      <li>The circular “9 / NINE.” logo was redrawn as inline SVG and now appears in the header, footer, favicon, and social assets. It is faithful to the photo, but the original vector file is still the safer master.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>4. Structure</h2>
+    <ol>
+      <li><strong>Header</strong> — brand mark, brand lockup, section navigation, order CTA.</li>
+      <li><strong>Hero</strong> — asymmetric 7/5 grid, live open/closed badge, editorial still-life SVG.</li>
+      <li><strong>Running ticker</strong> — hours, location, service cues.</li>
+      <li><strong>Highlights bento</strong> — atmosphere, menu, hours, facilities, ordering.</li>
+      <li><strong>Menu ledger</strong> — category pills, search, dotted-leader list, add-to-cart buttons.</li>
+      <li><strong>Gallery</strong> — six numbered CSS illustrations; real-photo lightbox ready but disabled while the gallery is empty.</li>
+      <li><strong>Hours and location</strong> — weekly table, today marker, inline map, directions.</li>
+      <li><strong>Order band</strong> — forest CTA into the menu or the order sheet.</li>
+      <li><strong>Footer</strong> — large logo, contact placeholders, demo disclosure.</li>
+      <li><strong>Cart bar + order sheet</strong> — persistence, quantity controls, item notes, customer form, copy and WhatsApp fallback.</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>5. Motion and accessibility</h2>
+    <p><strong>Motion.</strong> One easing family: <code>--ease-out</code>, <code>--ease-in-out</code>, <code>--ease-drawer</code>. Press 120ms, hover 160ms, state 200ms, drawer 280ms, reveal 420ms. Only <code>transform</code> and <code>opacity</code> animate. Hover transitions are gated behind <code>@media (hover: hover) and (pointer: fine)</code>. <code>?motion=off</code> and <code>prefers-reduced-motion</code> remove marquee, parallax, reveal movement, and drawer slide without hiding content.</p>
+    <p><strong>Accessibility.</strong> Skip link, visible focus ring, semantic landmarks, labelled controls. The order sheet and lightbox are real dialogs with focus trap, Escape close, focus restoration, <code>inert</code> background, and scroll lock. Live regions announce cart changes, copy results, and empty states. Mobile inputs stay at 16px; touch targets are at least 44px.</p>
+    <table class="no-break">
+      <tr><th>Audit</th><th>Viewport</th><th>Violations</th><th>Passes</th></tr>
+      <tr><td>axe mobile</td><td>390×844</td><td>0</td><td>47</td></tr>
+      <tr><td>axe desktop</td><td>1440×1000</td><td>0</td><td>46</td></tr>
+    </table>
+    <p>The single <code>color-contrast</code> incomplete group is caused by gradient backgrounds and was reviewed manually. No gradient-backed text fails WCAG AA.</p>
+  </section>
+
+  <section class="section">
+    <h2>6. Ordering flow</h2>
+    <p>Pilih menu → tambah ke keranjang → buka “Lihat pesanan” → atur jumlah dan catatan → isi nama, jenis pesanan, nomor meja bila perlu → salin atau kirim.</p>
+    <p>Because the live WhatsApp number is not supplied, <strong>Kirim via WhatsApp</strong> copies the exact order text and shows a toast; <strong>Salin pesanan</strong> does the same on demand. The order text is built by <code>cafe-core.js</code>, so every path produces the same result.</p>
+  </section>
+
+  <section class="section">
+    <h2>7. Tests and QA</h2>
+    <table>
+      <tr><th>Check</th><th>Result</th></tr>
+      <tr><td><code>node --test</code></td><td>26/26 pass</td></tr>
+      <tr><td>Mobile axe 390×844</td><td>0 violations, 47 passes</td></tr>
+      <tr><td>Desktop axe 1440×1000</td><td>0 violations, 46 passes</td></tr>
+      <tr><td>Console and page errors</td><td>clean</td></tr>
+      <tr><td>Web vitals</td><td>FCP under 300ms, TTFB under 5ms, CLS 0</td></tr>
+    </table>
+    <p>Browser QA covered menu filter/search, URL state, add/update/remove/clear cart, reload persistence, stale-cart migration, sheet focus trap, Escape restoration, copy and send fallback, order-type table rules, scrollspy, the <code>[hidden]</code> guard, maxlength, HTML-injection check, and console health. Full detail: <code>docs/qa-report.md</code>.</p>
+  </section>
+
+  <section class="section">
+    <h2>8. Produced assets</h2>
+    <table>
+      <tr><th>Asset</th><th>File</th></tr>
+      <tr><td>X post card, 1080×1080</td><td><code>assets/social/x-post-card.png</code></td></tr>
+      <tr><td>Xiaohongshu set, 4 × 1080×1440</td><td><code>assets/social/xiaohongshu-01..04.png</code></td></tr>
+      <tr><td>Website/X banner, 1500×500</td><td><code>assets/banners/banner-1500x500.png</code></td></tr>
+      <tr><td>Square banner, 1080×1080</td><td><code>assets/banners/banner-1080x1080.png</code></td></tr>
+      <tr><td>Favicon</td><td><code>assets/favicon.svg</code></td></tr>
+    </table>
+    <p>All assets use the same palette, type system, and “Contoh desain” marker. No invented reviews, awards, engagement numbers, or stock photos.</p>
+  </section>
+
+  <section class="section">
+    <h2>9. Before launch</h2>
+    <ol>
+      <li>Confirm the WhatsApp number and replace <code>CAFE.waNumber</code>.</li>
+      <li>Supply real photos; add them to <code>CAFE.gallery</code> and enable the lightbox.</li>
+      <li>Confirm the Instagram handle.</li>
+      <li>Approve the SVG logo redraw or supply the original vector file.</li>
+      <li>Confirm the <code>Butterscooth Latte</code> spelling and final prices.</li>
+      <li>Remove or replace the “Contoh desain” markers once the owner approves the site.</li>
+    </ol>
+    <div class="callout">
+      <strong>Preview</strong>
+      <p><code>npm run serve</code> → <code>http://127.0.0.1:4173</code> · <code>npm test</code> → 26 tests</p>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "nine-caffe-eatery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nine Cafe & Eatery — static single-page cafe site (design demo).",
+  "scripts": {
+    "test": "node --test",
+    "serve": "node server.mjs",
+    "start": "node server.mjs"
+  }
+}
